@@ -1,0 +1,41 @@
+{
+  "name": "yudaant-observatory",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "YUDAANT \u2014 AI Behavioral Observatory. An interactive computational laboratory for studying behavioral and emergent patterns in interacting AI agents under controlled conditions.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "simulate": "tsx scripts/simulate.ts",
+    "demo": "bash scripts/demo.sh",
+    "demo:quick": "bash scripts/demo.sh --quick",
+    "simulate:pair": "tsx scripts/simulate.ts --pair --change MEMORY --agents 100 --rounds 200 --seed 1337 --quiet --report experiments",
+    "shots": "node scripts/shots.mjs"
+  },
+  "dependencies": {
+    "@xyflow/react": "^12.3.5",
+    "d3": "^7.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/node": "^22.20.5",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "jsdom": "^25.0.1",
+    "playwright": "^1.48.2",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  }
+}
